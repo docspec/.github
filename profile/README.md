@@ -7,7 +7,7 @@ DocSpec is a document specification and conversion system built around a JSON-ba
 ```
                                        ┌─ HTML
                                        ├─ EPUB
-         DOCX ──▶  DocSpec AST  ───────├─ BlockNote
+         DOCX ──▶  DocSpec AST  ──────├─ BlockNote
                       (JSON)           └─ Tiptap
 ```
 
