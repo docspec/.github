@@ -6,13 +6,13 @@ DocSpec is a document specification and conversion system built around a JSON-ba
 
 ```
 ┏━━━━━━┓                                               ┌──────┐
-┃ DOCX ┃ ─────────┐                              ┌───➤ │ DOCX │                       Legend:
-┗━━━━━━┛          │                              │     └──────┘                       ┏━━━━━━━━━━━━━┓
-┌──────┐          │                              │     ┏━━━━━━┓                       ┃ Implemented ┃
-│ HTML │ ─────────┤                              ├───➤ ┃ HTML ┃                       ┗━━━━━━━━━━━━━┛
-└──────┘          │                              │     ┗━━━━━━┛                       ┌────────────────────────┐
-┏━━━━━━━━┓        │                              │     ┏━━━━━━━━┓                     │ Implementation planned │
-┃ Tiptap ┃ ───────┤                              ├───➤ ┃ Tiptap ┃                     └────────────────────────┘
+┃ DOCX ┃ ─────────┐                              ┌───➤ │ DOCX │
+┗━━━━━━┛          │                              │     └──────┘
+┌──────┐          │                              │     ┏━━━━━━┓
+│ HTML │ ─────────┤                              ├───➤ ┃ HTML ┃
+└──────┘          │                              │     ┗━━━━━━┛
+┏━━━━━━━━┓        │                              │     ┏━━━━━━━━┓
+┃ Tiptap ┃ ───────┤                              ├───➤ ┃ Tiptap ┃
 ┗━━━━━━━━┛        │      ┏━━━━━━━━━━━━━━━━━┓     │     ┗━━━━━━━━┛
 ┌───────────┐     │      ┃ DocSpec         ┃     │     ┏━━━━━━━━━━━┓
 │ BlockNote │ ────┼────➤ ┃ Abstract Syntax ┃ ────┼───➤ ┃ BlockNote ┃
@@ -28,7 +28,10 @@ DocSpec is a document specification and conversion system built around a JSON-ba
 ┗━━━━━┛                                          │     └───────────────┘
                                                  │     ┏━━━━━━┓
                                                  └───➤ ┃ EPUB ┃
-                                                       ┗━━━━━━┛
+ Legend:                                               ┗━━━━━━┛
+┏━━━━━━━━━━━━━┓ ┌────────────────────────┐
+┃ Implemented ┃ │ Implementation planned │
+┗━━━━━━━━━━━━━┛ └────────────────────────┘
 ```
 
 ## Features
