@@ -2,6 +2,8 @@
 
 **Open document conversion for sovereign collaboration.**
 
+HTTP API support is planned to be released in the first week of February.
+
 DocSpec is a document specification and conversion system built around a JSON-based Abstract Syntax Tree (AST). It transforms legacy document formats into accessible, reusable content for modern editors.
 
 ```
@@ -48,6 +50,7 @@ DocSpec powers document import for [La Suite Docs](https://github.com/suitenumer
 ## Links
 
 - [Contributing](https://github.com/docspec/.github/blob/main/CONTRIBUTING.md)
+- [NLdoc, the original codebase](https://gitlab.com/logius/nldoc)
 
 ## License
 
