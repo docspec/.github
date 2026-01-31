@@ -5,37 +5,42 @@
 DocSpec is a document specification and conversion system built around a JSON-based Abstract Syntax Tree (AST). It transforms legacy document formats into accessible, reusable content for modern editors.
 
 ```
-                                       ┌─ HTML
-                                       ├─ EPUB
-         DOCX ──▶  DocSpec AST  ──────├─ BlockNote
-                      (JSON)           └─ Tiptap
+┏━━━━━━┓                                               ┌──────┐
+┃ DOCX ┃ ─────────┐                              ┌───➤ │ DOCX │                       Legend:
+┗━━━━━━┛          │                              │     └──────┘                       ┏━━━━━━━━━━━━━┓
+┌──────┐          │                              │     ┏━━━━━━┓                       ┃ Implemented ┃
+│ HTML │ ─────────┤                              ├───➤ ┃ HTML ┃                       ┗━━━━━━━━━━━━━┛
+└──────┘          │                              │     ┗━━━━━━┛                       ┌────────────────────────┐
+┏━━━━━━━━┓        │                              │     ┏━━━━━━━━┓                     │ Implementation planned │
+┃ Tiptap ┃ ───────┤                              ├───➤ ┃ Tiptap ┃                     └────────────────────────┘
+┗━━━━━━━━┛        │      ┏━━━━━━━━━━━━━━━━━┓     │     ┗━━━━━━━━┛
+┌───────────┐     │      ┃ DocSpec         ┃     │     ┏━━━━━━━━━━━┓
+│ BlockNote │ ────┼────➤ ┃ Abstract Syntax ┃ ────┼───➤ ┃ BlockNote ┃
+└───────────┘     │      ┃ Tree (AST)      ┃     │     ┗━━━━━━━━━━━┛
+┌──────────┐      │      ┗━━━━━━━━━━━━━━━━━┛     │     ┌──────────┐
+│ Markdown │ ─────┤                              ├───➤ │ Markdown │
+└──────────┘      │                              │     └──────────┘
+┌─────┐           │                              │     ┌─────┐
+│ ODT │ ──────────┤                              ├───➤ │ ODT │
+└─────┘           │                              │     └─────┘
+┏━━━━━┓           │                              │     ┌───────────────┐
+┃ PDF ┃ ──────────┘                              ├───➤ │ Typst and PDF │
+┗━━━━━┛                                          │     └───────────────┘
+                                                 │     ┏━━━━━━┓
+                                                 └───➤ ┃ EPUB ┃
+                                                       ┗━━━━━━┛
 ```
 
 ## Features
 
 - **Universal AST** with [TypeSpec](https://github.com/docspec/docspec) specification for document interchange
-- **Import** from DOCX
+- **Import** from DOCX, Tiptap
 - **Export** to HTML, EPUB, BlockNote, and Tiptap
 - **Accessibility-first** with real-time WCAG validation
-
-## Planned Formats
-
-| Format   | Import | Export |
-| -------- | ------ | ------ |
-| ODT      | ✓      | ✓      |
-| Markdown | ✓      | ✓      |
-| Typst    |        | ✓      |
 
 ## In Production
 
 DocSpec powers document import for [La Suite Docs](https://github.com/suitenumerique/docs), part of the Franco-German-Dutch sovereign collaboration stack under [DC-EDIC](https://digital-decade-dgs.ec.europa.eu/edic/dc-edic).
-
-## Repositories
-
-| Repository                                    | Description                           |
-| --------------------------------------------- | ------------------------------------- |
-| [docspec](https://github.com/docspec/docspec) | AST specification and TypeSpec schema |
-| [api](https://github.com/docspec/api)         | Conversion API service                |
 
 ## Links
 
@@ -43,4 +48,4 @@ DocSpec powers document import for [La Suite Docs](https://github.com/suitenumer
 
 ## License
 
-[EUPL-1.2](https://eupl.eu/)
+[EUPL-1.2](https://eupl.eu/), MIT
