@@ -2,4 +2,4 @@ blank_issues_enabled: true
 contact_links:
   - name: Discussions
     url: https://github.com/orgs/docspec/discussions
-    about: Ask questions or discuss ideas
+    about: Ask questions, share ideas, or talk through a design before opening an issue

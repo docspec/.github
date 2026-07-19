@@ -1,57 +1,62 @@
 # DocSpec
 
-**Open document conversion for sovereign collaboration.**
+**Streaming document conversion for sovereign collaboration.**
 
-HTTP API support is planned to be released in the first week of February.
+Documents, as they flow. DocSpec converts between document formats as a stream of
+typed events — one event at a time, in constant memory, never buffering the whole
+document. Built in Rust, from the same discipline end to end.
 
-DocSpec is a document specification and conversion system built around a JSON-based Abstract Syntax Tree (AST). It transforms legacy document formats into accessible, reusable content for modern editors.
+**Funded by** [NLnet](https://nlnet.nl) through the [NGI0 Commons Fund](https://nlnet.nl/commonsfund/), and the Netherlands' [Ministry of the Interior and Kingdom Relations](https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties).
 
-```
-┏━━━━━━┓                                               ┌──────┐
-┃ DOCX ┃ ─────────┐                              ┌───➤ │ DOCX │
-┗━━━━━━┛          │                              │     └──────┘
-┌──────┐          │                              │     ┏━━━━━━┓
-│ HTML │ ─────────┤                              ├───➤ ┃ HTML ┃
-└──────┘          │                              │     ┗━━━━━━┛
-┏━━━━━━━━┓        │                              │     ┏━━━━━━━━┓
-┃ Tiptap ┃ ───────┤                              ├───➤ ┃ Tiptap ┃
-┗━━━━━━━━┛        │      ┏━━━━━━━━━━━━━━━━━┓     │     ┗━━━━━━━━┛
-┌───────────┐     │      ┃ DocSpec         ┃     │     ┏━━━━━━━━━━━┓
-│ BlockNote │ ────┼────➤ ┃ Abstract Syntax ┃ ────┼───➤ ┃ BlockNote ┃
-└───────────┘     │      ┃ Tree (AST)      ┃     │     ┗━━━━━━━━━━━┛
-┌──────────┐      │      ┗━━━━━━━━━━━━━━━━━┛     │     ┌──────────┐
-│ Markdown │ ─────┤                              ├───➤ │ Markdown │
-└──────────┘      │                              │     └──────────┘
-┌─────┐           │                              │     ┌─────┐
-│ ODT │ ──────────┤                              ├───➤ │ ODT │
-└─────┘           │                              │     └─────┘
-┏━━━━━┓           │                              │     ┌───────────────┐
-┃ PDF ┃ ──────────┘                              ├───➤ │ Typst and PDF │
-┗━━━━━┛                                          │     └───────────────┘
-                                                 │     ┏━━━━━━┓
-                                                 └───➤ ┃ EPUB ┃
- Legend:                                               ┗━━━━━━┛
-┏━━━━━━━━━━━━━┓ ┌────────────────────────┐
-┃ Implemented ┃ │ Implementation planned │
-┗━━━━━━━━━━━━━┛ └────────────────────────┘
-```
+<p>
+  <a href="https://nlnet.nl"><img src="../assets/nlnet-banner.svg" alt="NLnet" height="40"></a>
+  &nbsp;&nbsp;
+  <a href="https://nlnet.nl/commonsfund/"><img src="../assets/ngi0-commons.svg" alt="NGI0 Commons Fund" height="40"></a>
+  &nbsp;&nbsp;
+  <a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"><img src="../assets/minbzk.jpg" alt="Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" height="40"></a>
+</p>
 
-## Features
+**Used by** [DINUM — La Suite Numérique](https://lasuite.numerique.gouv.fr).
 
-- **Universal AST** with [TypeSpec](https://github.com/docspec/docspec) specification for document interchange
-- **Import** from DOCX, Tiptap
-- **Export** to HTML, EPUB, BlockNote, and Tiptap
-- **Accessibility-first** with real-time WCAG validation
+<p>
+  <a href="https://lasuite.numerique.gouv.fr"><img src="../assets/dinum-gouv.svg" alt="Gouvernement" height="36"></a>
+  &nbsp;&nbsp;
+  <a href="https://lasuite.numerique.gouv.fr"><img src="../assets/lasuite.svg" alt="La Suite Numérique" height="36"></a>
+</p>
 
-## In Production
+## Pipeline
 
-DocSpec powers document import for [La Suite Docs](https://github.com/suitenumerique/docs), part of the Franco-German-Dutch sovereign collaboration stack under [DC-EDIC](https://digital-decade-dgs.ec.europa.eu/edic/dc-edic).
+Any reader feeds any writer; the event stream is the only contract between them.
+
+## What works today
+
+- **Reads** DOCX, HTML, Markdown
+- **Writes** HTML, Markdown, BlockNote JSON, oxa.dev JSON, Pandoc native
+- **HTTP API** — a streaming conversion server, available now: `docspec http`, or the `ghcr.io/docspec/api` image
+- **Constant memory** — documents stream through event by event, whatever their size
+
+Planned: ODT, PDF, Typst, EPUB, and Tiptap.
+
+## In production
+
+DocSpec powers document import for [La Suite Docs](https://github.com/suitenumerique/docs),
+part of the Franco-German-Dutch sovereign collaboration stack under
+[DC-EDIC](https://digital-decade-dgs.ec.europa.eu/edic/dc-edic).
+
+## Repositories
+
+- [docspec/docspec](https://github.com/docspec/docspec) — the Rust workspace: libraries, the CLI, and the HTTP server
 
 ## Links
 
 - [Contributing](https://github.com/docspec/.github/blob/main/CONTRIBUTING.md)
-- [NLdoc, the original codebase](https://gitlab.com/logius/nldoc)
+- [NLdoc — the original in Elixir](https://gitlab.com/logius/nldoc)
 
 ## License
 
-[EUPL-1.2](https://eupl.eu/), MIT
+[MIT](https://github.com/docspec/docspec/blob/main/LICENSE)
+
+## Thanks
+
+This work grew out of the mentoring and support of
+[@virgile-dev](https://github.com/virgile-dev).

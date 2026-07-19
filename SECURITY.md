@@ -2,24 +2,22 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in any DocSpec project, please report it responsibly.
+If you find a security vulnerability in any DocSpec project, please report it privately. Don't open a public issue.
 
-**Do not open a public issue for security vulnerabilities.**
+Send details to the project maintainers through [GitHub's private vulnerability reporting](https://github.com/docspec/docspec/security/advisories/new), or by emailing the maintainers directly if that channel isn't available. Include:
 
-Instead, please send details to the project maintainers privately. Include:
-
-- Description of the vulnerability
+- A description of the vulnerability
 - Steps to reproduce
 - Potential impact
 - Any suggested fixes (optional)
 
-We will acknowledge receipt within 48 hours and provide a more detailed response within 7 days, including next steps and expected timeline for a fix.
+We'll acknowledge receipt within 48 hours and follow up within 7 days with next steps and an expected timeline for a fix.
 
 ## Security Best Practices
 
-When using DocSpec in production:
+When running DocSpec in production:
 
-- Keep dependencies updated
-- Validate and sanitize document inputs before processing
+- Keep dependencies updated — run `cargo update` regularly and watch for `cargo audit` advisories
+- Validate and sanitize document inputs before processing; DocSpec streams what it receives
 - Run conversion services in isolated environments
-- Monitor for unusual resource consumption during document processing
+- Monitor for unusual resource consumption during document processing — a malformed document shouldn't be able to exhaust memory, but defense in depth matters
