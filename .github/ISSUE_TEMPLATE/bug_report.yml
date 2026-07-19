@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting a bug! Please fill out the information below to help us investigate.
+        Found something broken? Fill out the details below so we can reproduce and fix it.
 
   - type: input
     id: version
@@ -58,5 +58,5 @@ body:
       description: Any relevant environment details
       placeholder: |
         - OS: Ubuntu 22.04
-        - Elixir: 1.16
-        - Erlang: 26.0
+        - Rust: 1.79.0 (rustc --version)
+        - DocSpec: 1.0.0

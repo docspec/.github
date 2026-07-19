@@ -20,14 +20,15 @@
 
 <!-- Describe how you tested your changes -->
 
-- [ ] Unit tests pass
-- [ ] Integration tests pass (if applicable)
-- [ ] Manual testing performed
+- [ ] `cargo test` passes
+- [ ] New or changed behavior is covered by tests
+- [ ] Manual testing performed (describe below if applicable)
 
 ## Checklist
 
-- [ ] My code follows the project's style guidelines
-- [ ] I have performed a self-review of my code
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] I have updated the documentation (if applicable)
-- [ ] My changes generate no new warnings
+- [ ] `cargo fmt` passes
+- [ ] `cargo clippy` passes with zero warnings
+- [ ] No `unwrap()` or `expect()` added to source code
+- [ ] All public items have doc comments
+- [ ] Documentation updated if the public API or behavior changed
+- [ ] Commits follow the conventional format: `type(scope): description`

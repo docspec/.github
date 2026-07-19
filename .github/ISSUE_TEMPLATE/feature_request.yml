@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for suggesting an improvement! Please describe your idea below.
+        Have an idea for DocSpec? Describe the problem you're solving and how you'd like to see it addressed.
 
   - type: dropdown
     id: component
@@ -52,4 +52,4 @@ body:
     attributes:
       label: Additional Context
       description: Any other context, mockups, or examples
-      placeholder: Links, screenshots, related issues, etc.
+      placeholder: Links, related issues, sample documents, etc.
