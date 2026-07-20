@@ -9,19 +9,19 @@ document. Built in Rust, from the same discipline end to end.
 **Funded by** [NLnet](https://nlnet.nl) through the [NGI0 Commons Fund](https://nlnet.nl/commonsfund/), and the Netherlands' [Ministry of the Interior and Kingdom Relations](https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties).
 
 <p>
-  <a href="https://nlnet.nl"><img src="../assets/nlnet-banner.svg" alt="NLnet" height="40"></a>
+  <a href="https://nlnet.nl"><img src="https://raw.githubusercontent.com/docspec/.github/main/assets/nlnet-banner.svg" alt="NLnet" height="40"></a>
   &nbsp;&nbsp;
-  <a href="https://nlnet.nl/commonsfund/"><img src="../assets/ngi0-commons.svg" alt="NGI0 Commons Fund" height="40"></a>
+  <a href="https://nlnet.nl/commonsfund/"><img src="https://raw.githubusercontent.com/docspec/.github/main/assets/ngi0-commons.svg" alt="NGI0 Commons Fund" height="40"></a>
   &nbsp;&nbsp;
-  <a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"><img src="../assets/minbzk.jpg" alt="Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" height="40"></a>
+  <a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"><img src="https://github.com/docspec/.github/raw/main/assets/minbzk.jpg" alt="Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" height="40"></a>
 </p>
 
 **Used by** [DINUM — La Suite Numérique](https://lasuite.numerique.gouv.fr).
 
 <p>
-  <a href="https://lasuite.numerique.gouv.fr"><img src="../assets/dinum-gouv.svg" alt="Gouvernement" height="36"></a>
+  <a href="https://lasuite.numerique.gouv.fr"><img src="https://raw.githubusercontent.com/docspec/.github/main/assets/dinum-gouv.svg" alt="Gouvernement" height="36"></a>
   &nbsp;&nbsp;
-  <a href="https://lasuite.numerique.gouv.fr"><img src="../assets/lasuite.svg" alt="La Suite Numérique" height="36"></a>
+  <a href="https://lasuite.numerique.gouv.fr"><img src="https://raw.githubusercontent.com/docspec/.github/main/assets/lasuite.svg" alt="La Suite Numérique" height="36"></a>
 </p>
 
 ## Pipeline
